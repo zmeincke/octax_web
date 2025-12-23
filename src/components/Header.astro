@@ -1,0 +1,52 @@
+<header>
+    <div class="logo">
+        <img src="/svg/octaxlogo.svg" alt="octax logo">
+        <p>octax</p>
+    </div>
+    <nav>
+        <ul>
+            <li><a href="/">Hjem</a></li>
+            <li><a href="/mafia">Mafia/Bedrager</a></li>
+            <li><a href="/comingsoon">Kommer snart</a></li>
+            <li><a href="/about">Om os</a></li>
+            <li><a href="gallery">Galleri</a></li>
+        </ul>
+    </nav>
+</header>
+
+<style>
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 4rem;
+        .logo {
+            img {
+                width: 2rem;
+                height:auto
+            }
+        }
+        div {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            p {
+                text-transform: uppercase;
+                font-family: var(--titlefont);
+                color: var(--accentcolor);
+            }
+        }
+        nav {
+            a {
+                text-decoration: none;
+                color: var(--accentcolor);
+                font-family: var(--textfont);
+            }
+            ul {
+                list-style: none;
+                display: flex;
+                gap: 1rem;
+            }
+        }
+    }
+</style>

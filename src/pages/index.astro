@@ -1,16 +1,66 @@
 ---
-
+import Layout from "../components/Layout.astro";
+import Button from "../components/Button.astro";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Layout>
+	<div class="wrap">
+		<h1>octax</h1>
+		<p>Et lille eventfirma, der sikre tæt samarbejde, direkte kontakt og fuld fokus på jeres event. Vi skaber skræddersyede oplevelser i tæt dialog med jer fra start til slut.</p>
+		<div class="btn">
+			<Button text="Om os" href="/about" />
+			<Button variant="primary" text="Kom igang" href="/mafia" />
+		</div>
+	</div>
+	<figure>
+		<div class="filter"></div>
+		<img src="/svg/octaxlogo.svg" alt="octax background logo">
+	</figure>
+</Layout>
+
+<style>
+	.wrap {
+		position: absolute;
+		z-index: 10;
+		top: calc(100%/2.75);
+		left: calc(100%/4);
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+		max-width: 50%;
+		h1 {
+			font-family: var(--titlefont);
+			font-size: 5rem;
+			text-transform: uppercase;
+		}
+		p {
+			font-weight: 100;
+		}
+	}
+	.btn {
+		display: flex;
+		gap: 1rem;
+		margin-top: 2rem;
+		:first-child, :last-child {
+			width: 5.75rem;
+		}
+	}
+	.filter {
+		position: fixed;
+		z-index: 1;
+		opacity:60%;
+		background-color: var(--secondarybgcolor);
+		padding: 100%;
+	}
+	figure {
+		display: flex;
+		z-index: 0;
+		justify-content: center;
+		img {
+			height: calc(85vh);
+			width: auto;
+			margin: 3rem auto;
+		}
+	}
+</style>
