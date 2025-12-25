@@ -1,0 +1,57 @@
+---
+const { title, text, img, alt } = Astro.props;
+---
+
+<div>
+    <div>
+        <h1>{title}</h1>
+        <p>{text}</p>
+    </div>
+    <figure>
+        <div class="filter"></div>
+        <img src={img} alt={alt}>
+    </figure>
+</div>
+
+<style>
+    div {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        div {
+            z-index: 10;
+            position: absolute;
+            flex-direction: column;
+            h1 {
+                font-family: var(--titlefont);
+                font-size: 3rem;
+                text-transform: uppercase;
+                margin-bottom: 2rem;
+            }
+            p {
+                font-size: 1.5rem;
+                max-width: 60rem;
+                text-align: center
+            };
+        }
+        figure {
+            width: 100%;
+            height: 40rem;
+            overflow: hidden;
+            .filter {
+                position: fixed;
+                z-index: 1;
+                opacity:60%;
+                background-color: var(--secondarybgcolor);
+                padding: 100%;
+                margin-top: -5rem;
+            }
+            img {
+                z-index: 0;
+                width: 100%;
+                height: auto;
+            }
+        }
+    }
+</style>

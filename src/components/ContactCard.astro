@@ -1,0 +1,53 @@
+---
+import Button from "./Button.astro";
+---
+
+<article>
+    <figure class="line"></figure>
+    <div>
+        <h3>Interesseret?</h3>
+        <p>Har du spørgsmål eller ønsker at booke en af vores events? Kontakt os herunder.</p>
+        <h4>+45 25 77 18 08</h4>
+        <p>eller</p>
+        <Button variant="primary" text="Book nu" href="mailto:info@octax.dk"/>
+    </div>
+    <figure class="line"></figure>
+</article>
+
+<style>
+    article {
+        border: solid 0.25rem var(--accentcolor);
+        border-radius: 1rem;
+        padding: 2rem;
+        margin-top: 2rem;
+        width: 22rem;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        div {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 2rem;
+            h3 {
+                font-size: 1.75rem;
+                margin-bottom: -1.5rem;
+            }
+            h4 {
+                font-family: var(--textfont);
+                font-size: 1.5rem;
+            }
+            p {
+                font-family: var(--textfont);
+                text-align: center;
+                font-size: 1rem;
+            }
+        }
+    }
+    .line {
+        width: 100%;
+        height: 0.1rem;
+        background-color: var(--accentcolor);
+         margin: 2rem 0rem;
+    }
+</style>

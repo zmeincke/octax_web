@@ -1,5 +1,68 @@
 ---
+import Hero from "../components/Hero.astro";
 import Layout from "../components/Layout.astro";
+import OverviewCard from "../components/OverviewCard.astro";
+import ContactCard from "../components/ContactCard.astro";
 ---
 
-<Layout></Layout>
+<Layout>
+    <Hero 
+    title="Mafia - Bedrager"
+    text="Er et selskabs event der tester dine sociale færdigeheder og dedoktions evner. Eventet arbejder med kendte temaer fra kendte klassikere."
+    img="/img/mafia-bedrager.png"
+    alt="blured picture of mob person"
+    />
+    <div>
+        <section>
+            <ContactCard/>
+            <div>
+                <div>
+                    <h2>Beskrivelse</h2>
+                    <p>Mafia bedrager er et event der handler om sammarbejde, kommunikation og deduktion evner.</p>
+                </div>
+                <div>
+                    <h2>Ramme</h2>
+                    <p>...</p>
+                </div>
+            </div>
+        </section>
+        <div class="cardContainer">
+            <OverviewCard title="Pakke 1 - Børn og Unge" participants="20-24 personer" duration="8 timer - inkl. pause" workingHours="10 timer - inkl. opsætning og nedpakning" price="11.000 DKK - ekskl. moms" href="/contact">
+                <ul>
+                    <li>Lokation skal være tilgængeligt for crew opsætning 1t før event start.</li>
+                    <li>Lokation skal være tilgængeligt 1 time efter afslutning til oprydning og nepakning.</li>
+                    <li>Vi anbefaler at arrengere mad i pausen.</li>
+                </ul>
+            </OverviewCard>
+            <OverviewCard title="Pakke 2 - 18+" participants="20-24 personer" duration="8 timer - inkl. pause" workingHours="10 timer - inkl. opsætning og nedpakning" price="11.000 DKK - ekskl. moms" href="/contact">
+                <ul>
+                    <li>Lokation skal være tilgængeligt for crew opsætning 1t før event start.</li>
+                    <li>Lokation skal være tilgængeligt 1 time efter afslutning til oprydning og nepakning.</li>
+                    <li>Vi anbefaler at arrengere mad i pausen.</li>
+                    <li>Alkohol er tilladt, i begrænset omfang. Drik ansvarligt</li>
+                </ul>
+            </OverviewCard>
+        </div>
+    </div>
+</Layout>
+
+<style>
+    section {
+        display: flex;
+        gap: 4rem;
+        justify-content: center;
+        margin: 4rem 0;
+        >div {
+            width: 45%;
+            display: flex;
+            flex-direction: column;
+            gap: 4rem;
+        }
+    }
+    .cardContainer {
+        display: flex;
+        gap: 2rem;
+        justify-content: center;
+        margin: 4rem 0;
+    }
+</style>

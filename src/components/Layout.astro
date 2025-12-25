@@ -19,7 +19,7 @@ import Header from "../components/Header.astro";
 </html>
 
 <style is:global>
-    :root {
+:root {
     --primarybgcolor: #232121;
     --secondarybgcolor: #000000;
     --primarytextcolor: #FDFDFD;
@@ -28,7 +28,7 @@ import Header from "../components/Header.astro";
     --darkassentcolor: #C8523A;
 
     --textfont: 'montserrat', sans-serif;
-    --titlefont: 'gin', sans-serif;
+    --titlefont: 'gin', 'montserrat', sans-serif;
 }
 
 
@@ -50,6 +50,7 @@ body {
 a, p, h1, h2, h3, h4, h5, h6, li {
     color: var(--primarytextcolor);
     font-family: var(--textfont);
+    font-size: 1.5rem;
 }
 h1 {
     font-family: var(--titlefont);

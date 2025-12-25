@@ -1,0 +1,75 @@
+---
+import Button from "./Button.astro";
+const { title, participants, duration, workingHours, price, href } = Astro.props;
+---
+<aside>
+    <h2>{title}</h2>
+    <figure class="line"></figure>
+    <div>
+        <dl>
+            <dt>Deltagere:</dt>
+            <dd>{participants}</dd>
+
+            <dt>Varighed:</dt>
+            <dd>{duration}</dd>
+
+            <dt>Arbejdstid:</dt>
+            <dd>{workingHours}</dd>
+
+            <dt>Vejledende pris:</dt>
+            <dd>{price}</dd>
+        </dl>
+        <figure class="line"></figure>
+        <div>
+            <h3>Vigtige punkter:</h3>
+            <slot/>
+        </div>
+        <Button text="Book nu" href={href}/>
+    </div>
+</aside>
+
+<style>
+    aside {
+        z-index: 10;
+        background-color: var(--backgroundcolor);
+        border-radius: 1rem;
+        padding: 4rem 2rem;
+        max-width: 40rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        .line {
+            width: 100%;
+            height: 0.1rem;
+            background-color: var(--accentcolor);
+        }
+        div {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            dl {
+                display: flex;
+                flex-direction: column;
+                gap: 0.5rem 2rem;
+                font-family: var(--textfont);
+                dt {
+                    font-size: small;
+                    font-weight: 800;
+                }
+                dd {
+                    font-size: larger;
+                }
+            }
+            h3 {
+                font-size: 1.5rem;
+                text-transform: uppercase;
+                font-family: var(--titlefont);
+            }
+            ul {
+                margin-left: 1.5rem;
+                list-style: disc;
+                height: 8rem;
+            }
+        }
+    }
+</style>
