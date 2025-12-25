@@ -9,13 +9,21 @@ import Header from "../components/Header.astro";
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-</head>
-<body>
+    <link rel="stylesheet" href="https://use.typekit.net/ltu2ahb.css" />
+    <style>
+      :root {
+        --titlefont: "gin", serif;
+      }
+      /* ensure weight/style */
+      h1 { font-weight: 400; font-style: normal; }
+    </style>
+  </head>
+  <body>
     <Header/>
     <main>
         <slot />
     </main>
-</body>
+  </body>
 </html>
 
 <style is:global>
