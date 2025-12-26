@@ -31,10 +31,10 @@ const { title, participants, duration, workingHours, price, href } = Astro.props
 <style>
     aside {
         z-index: 10;
-        background-color: var(--backgroundcolor);
+        background-color: var(--secondarybgcolor);
         border-radius: 1rem;
-        padding: 4rem 2rem;
-        max-width: 40rem;
+        padding: 3rem 6rem 3rem 4rem;
+        max-width: 30rem;
         display: flex;
         flex-direction: column;
         gap: 1.5rem;
@@ -63,12 +63,14 @@ const { title, participants, duration, workingHours, price, href } = Astro.props
             h3 {
                 font-size: 1.5rem;
                 text-transform: uppercase;
-                font-family: var(--titlefont);
+                font-size: small;
+                font-weight: 800;
+                margin-bottom: -1rem;
             }
             ul {
                 margin-left: 1.5rem;
                 list-style: disc;
-                height: 8rem;
+                height: 12rem;
             }
         }
     }
