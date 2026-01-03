@@ -1,5 +1,32 @@
 ---
 import Layout from "../components/Layout.astro";
+import Hero from "../components/Hero.astro";
+import EmployeeCard from "../components/EmployeeCard.astro";
 ---
 
-<Layout></Layout>
+<Layout>
+    <Hero>
+        <h1>Om os</h1>
+        <p>Octax er et eventfirma grundlagt i 2023 af en gruppe passionerede eventplanlæggere med mange års erfaring inden for branchen. Vores mission er at skabe unikke og mindeværdige oplevelser for vores kunder gennem skræddersyede events, der afspejler deres vision og behov.</p>
+    </Hero>
+    <section></section>
+    <aside>
+        <section class="employees">
+            <h2>Vores team</h2>
+            <EmployeeCard image="/svg/icon-contact-j.svg" name="Jesper Hesselberg" role="Medstifter, Ekstern kommunikation" phonenumber="+45 25 77 18 08" email="info@octax.dk"/>
+            <EmployeeCard image="/svg/icon-contact-v.svg" name="Viktor Mantzius" role="Medstifter, IT & Økonomi" phonenumber="+45 22 42 68 14" email="kasser@octax.dk"/>
+            <EmployeeCard image="/svg/icon-contact-z.svg" name="Zasia Meincke" role="Medstifter, HR & Marketing" email="pr@octax.dk", phone="hide"/>
+        </section>
+        <form></form>
+    </aside>
+</Layout>
+
+<style>
+    .employees {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        justify-content: center;
+        margin-top: 2rem;
+    }
+</style>
