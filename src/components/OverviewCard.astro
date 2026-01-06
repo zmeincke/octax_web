@@ -33,11 +33,11 @@ const { title, participants, duration, workingHours, price, href } = Astro.props
         z-index: 10;
         background-color: var(--secondarybgcolor);
         border-radius: 1rem;
-        padding: 3rem 6rem 3rem 4rem;
-        max-width: 30rem;
+        padding: 3rem 4rem;
+        max-width: 40rem;
         display: flex;
         flex-direction: column;
-        gap: 1.5rem;
+        gap: 2rem;
         .line {
             width: 100%;
             height: 0.1rem;
@@ -53,24 +53,29 @@ const { title, participants, duration, workingHours, price, href } = Astro.props
                 gap: 0.5rem 2rem;
                 font-family: var(--textfont);
                 dt {
-                    font-size: small;
+                    font-size: 1.2rem;
                     font-weight: 800;
                 }
                 dd {
-                    font-size: larger;
+                    font-size: 1.5rem;
+                    margin-bottom: 1rem;
                 }
             }
             h3 {
                 font-size: 1.5rem;
                 text-transform: uppercase;
-                font-size: small;
+                font-size: 1.2rem;
                 font-weight: 800;
-                margin-bottom: -1rem;
+                margin-top: 1rem;
             }
             ul {
                 margin-left: 1.5rem;
                 list-style: disc;
-                height: 12rem;
+                height: 15rem;
+                
+                li {
+                    margin-bottom: 0.5rem;
+                }
             }
         }
     }

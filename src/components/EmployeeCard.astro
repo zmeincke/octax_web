@@ -20,17 +20,17 @@ const { image, name, role, phonenumber, email, phone } = Astro.props;
     width: 15rem;
     display: flex;
     flex-direction: column;
-    align-items: center;
     figure {
         width: 10rem;
         height: auto;
+        align-self: center;
     }
     h3 {
         font-size: 1.5rem;
         margin-top: 0.5rem;
     }
     p {
-        font-size: small;
+        font-size: 0.8rem;
         margin-bottom: 1rem;
     }
     dl {
@@ -39,12 +39,12 @@ const { image, name, role, phonenumber, email, phone } = Astro.props;
         gap: 0.5rem 2rem;
         font-family: var(--textfont);
         dt {
-            font-size: small;
+            font-size: 1rem;
             font-weight: 800;
             color: var(--accentcolor);
         }
         dd {
-            font-size: larger;
+            font-size: 1.5rem;
         }
         dt.hide {
             display: none;

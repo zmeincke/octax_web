@@ -5,23 +5,98 @@ import EmployeeCard from "../components/EmployeeCard.astro";
 ---
 
 <Layout>
-    <Hero>
-        <h1>Om os</h1>
-        <p>Octax er et eventfirma grundlagt i 2023 af en gruppe passionerede eventplanlæggere med mange års erfaring inden for branchen. Vores mission er at skabe unikke og mindeværdige oplevelser for vores kunder gennem skræddersyede events, der afspejler deres vision og behov.</p>
-    </Hero>
-    <section></section>
-    <aside>
-        <section class="employees">
-            <h2>Vores team</h2>
-            <EmployeeCard image="/svg/icon-contact-j.svg" name="Jesper Hesselberg" role="Medstifter, Ekstern kommunikation" phonenumber="+45 25 77 18 08" email="info@octax.dk"/>
-            <EmployeeCard image="/svg/icon-contact-v.svg" name="Viktor Mantzius" role="Medstifter, IT & Økonomi" phonenumber="+45 22 42 68 14" email="kasser@octax.dk"/>
-            <EmployeeCard image="/svg/icon-contact-z.svg" name="Zasia Meincke" role="Medstifter, HR & Marketing" email="pr@octax.dk", phone="hide"/>
+    <Hero
+    title="Om os"
+    text="OctaX I/S er et eventfirma, der blev skabt ud fra en fælles vision, om at give en masse fede oplevelser til børn og unge (og voksne) igennem læring og leg. Vi brænder for at udvikle og afvikle nye, spændende og lærerige events, der listigt forklæder vigtige kompetencer som sjove og engagerende udfordringer."
+    img="/img/about.png"
+    alt="picture of a group activity"/>
+    <div class="pagelayout">
+        <section class="about">
+            <div>
+                <h2>Vores værdier</h2>
+                <dl>
+                    <dt>Our belief</dt>
+                    <dd>Vi tror på, at de bedste læringsøjeblikke opstår, når man udfordres , intellektuelt fysisk og socialt i trygge og spændende rammer.</dd>
+                    <dt>Samarbejde</dt>
+                    <dd>Vi tror på, at de bedste events skabes gennem tæt samarbejde med vores kunder. Vi lytter til jeres ønsker og arbejder sammen for at realisere jeres vision.</dd>
+                    <dt>Innovation</dt>
+                    <dd>Vi specialiserer os i at skabe autentiske og intense live-events, der tvinger deltagerne til at være på dupperne, tænke strategisk. Vores events er designet til at teste jeres sociale evner, kritiske tænkning og evnen til samarbejde.</dd>
+                    <dt>Kreativitet</dt>
+                    <dd>Vi er altid på udkig efter nye og kreative måder at forbedre vores events på. Vi omfavner innovation og teknologi for at skabe unikke oplevelser, der skiller sig ud.</dd>
+                    <dt>Kvalitet</dt>
+                    <dd>Vi går aldrig på kompromis med kvaliteten af vores arbejde. Fra planlægning til udførelse sikrer vi, at hvert aspekt af jeres event er af højeste standard.</dd>
+                </dl>
+            </div>
+            <div>
+                <h2>Hvad laver vi</h2>
+                <p>Vi specialiserer os i at skabe autentiske og intense live-events, der tvinger deltagerne til at være på dupperne, tænke strategisk. Vores events er designet til at teste jeres sociale evner, kritiske tænkning og evnen til samarbejde.</p>
+            </div>
+            <div>
+                <h2>Vores team</h2>
+                <div>
+                    <p>Vores team er dedikeret til at tænke uden for boksen og bringe innovative ideer til bordet. Vi stræber efter at skabe unikke oplevelser, der skiller sig ud.</p>
+                </div>
+            </div>
+            <div>
+                <h2>Historie</h2>
+                <p>OctaX I/S blev stiftet i 2025 af tre passionerede ... med mange års erfaring inden for ....</p>
+            </div>
         </section>
-        <form></form>
-    </aside>
+        <figure class="divider"></figure>
+        <aside>
+            <h2>Kontakt</h2>
+            <section class="employees">
+                <EmployeeCard image="/svg/icon-contact-j.svg" name="Jesper Hesselberg" role="Medstifter, Kom. & Kundekontakt" phonenumber="+45 25 77 18 08" email="info@octax.dk"/>
+                <EmployeeCard image="/svg/icon-contact-v.svg" name="Viktor Mantzius" role="Medstifter, IT & Økonomi" phonenumber="+45 22 42 68 14" email="kasser@octax.dk"/>
+                <EmployeeCard image="/svg/icon-contact-z.svg" name="Zasia V. Meincke" role="Medstifter, HR & Marketing" email="pr@octax.dk", phone="hide"/>
+            </section>
+            <form></form>
+        </aside>
+    </div>
 </Layout>
 
 <style>
+    :global(img.heroImage) {
+    margin-top: -24rem;
+    }
+    div.pagelayout {
+        display: flex;
+        justify-content: space-between;
+        gap: 2rem;
+        margin: 4rem 10rem;
+
+        figure.divider {
+            width: 0.5rem;
+            height: 115vh;
+            background-color: var(--accentcolor);
+        }
+    }
+    section.about {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        h2 {
+            margin-bottom: 0.25rem;
+            font-size: 2rem;
+            color: var(--accentcolor);
+        }
+        dt {
+            font-weight: 900;
+            font-size: 1.25rem;
+        }
+        dd {
+            margin-bottom: 1rem;
+        }
+    }
+    aside {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        width: 165rem;
+        h2 {
+            font-size: 2rem;
+        }
+    }
     .employees {
         display: flex;
         flex-wrap: wrap;
